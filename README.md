@@ -26,10 +26,9 @@ grid_mapper_2d:
     scan_duration: 0.1 
 
     # ===== Cartographer 2D 维度降级优化 =====
-    # 强制锁定 Z轴位移 以及 Roll/Pitch 旋转变化，根除2D平面长距离 Z轴积分飘移
     carto_2d_optimization: true
 
-    # ===== 全局兜底裁剪 =====
+    # ===== 全局裁剪 =====
     obstacle_z_min:   0.5    
     obstacle_z_max:   1.0     
 
@@ -37,7 +36,7 @@ grid_mapper_2d:
     log_odds_decay:  0.05
     decay_period_frames: 20
 
-    # ===== 高程滤波配置保持不变 =====
+    # ===== 高程滤波配置 =====
     use_elevation_ground_filter: true
     sensor_mount_height: 4.0        
     elevation_grid_res: 0.5         
