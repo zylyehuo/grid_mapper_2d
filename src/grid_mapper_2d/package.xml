@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>grid_mapper_2d</name>
+  <version>0.2.0</version>
+  <description>
+    Self-contained 2D occupancy grid mapper. Estimates pose from raw LiDAR +
+    IMU topics (no external SLAM required) and builds a ground-removed
+    log-odds 2D map. Suitable for replaying ROS2 bags.
+  </description>
+  <maintainer email="user@todo.invalid">user</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>pcl_conversions</depend>
+  <depend>libpcl-all-dev</depend>
+  <depend>eigen</depend>
+
+  <exec_depend>rviz2</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
+

@@ -1,0 +1,76 @@
+grid_mapper_2d:
+  ros__parameters:
+    cloud_topic: "/rslidar_points"  # "/rslidar_points" "/rslidar_points_front"
+    imu_topic:   "/xsens_chetou/imu/data"  # "/xsens_chetou/imu/data" "/imu/data/front"
+    map_frame:   "map"
+    body_frame:  "base_link"
+    save_dir:    "/home/zylyehuo/mapping/grid_mapper_2d/src/grid_mapper_2d/map"
+
+    resolution: 0.05
+    range_max:  10.0                  
+    raycast_max_range: 10.0           
+    publish_period_ms: 500
+    scan_duration: 0.1 
+
+    # ===== Cartographer 2D 维度降级优化 =====
+    # 强制锁定 Z轴位移 以及 Roll/Pitch 旋转变化，根除2D平面长距离 Z轴积分飘移
+    carto_2d_optimization: true
+
+    # ===== 全局兜底裁剪 =====
+    obstacle_z_min:   0.5    
+    obstacle_z_max:   1.0     
+
+    # ===== 针对残影的参数优化 =====
+    log_odds_decay:  0.05
+    decay_period_frames: 20
+
+    # ===== 高程滤波配置保持不变 =====
+    use_elevation_ground_filter: true
+    sensor_mount_height: 4.0        
+    elevation_grid_res: 0.5         
+    elevation_z_tolerance: 5.35
+    elevation_max_slope: 0.15
+
+    voxel_leaf_scan: 0.30             
+    voxel_leaf_map:  0.40             
+    voxel_leaf_grid: 0.05             
+
+    exclude_box_en:     true
+    exclude_box_min_x: -4.0
+    exclude_box_max_x:  0.2
+    exclude_box_min_y: -0.2
+    exclude_box_max_y:  1.0
+    exclude_box_min_z: -6.5
+    exclude_box_max_z:  0.5
+
+    # ===== 车体自身残影过滤 / 轨迹走廊清除 =====
+    self_filter_en: true
+    self_filter_min_x: -0.2
+    self_filter_max_x:  0.2
+    self_filter_min_y: -0.2
+    self_filter_max_y:  0.2
+    self_filter_min_z: -6.5
+    self_filter_max_z:  1.2
+    self_filter_clear_margin: 0.35
+    self_filter_clear_log_odds: -2.0
+    self_filter_path_sample_step: 0.20
+    self_filter_path_min_distance: 0.10
+    self_filter_history_max_poses: 30000
+
+    log_odds_hit:    0.85
+    log_odds_miss:  -0.40             
+    log_odds_min:   -2.0
+    log_odds_max:    2.0              
+      
+    imu_init_frames: 30
+    align_world_to_gravity: true
+
+    gicp_max_correspondence_distance: 1.0
+    gicp_max_iterations: 15
+    local_map_max_size: 30.0
+    publish_world_cloud: true
+
+    extrinsic_T_lidar_in_imu: [0.0, 0.0, 0.20]
+    extrinsic_R_lidar_in_imu: [1.0, 0.0, 0.0,
+                               0.0, 1.0, 0.0,
+                               0.0, 0.0, 1.0]

@@ -1,0 +1,20 @@
+# Ignore ROS 2 build and runtime generated directories (workspace root only)
+/build/
+/install/
+/log/
+
+# Ignore Python runtime cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore common system hidden files
+.DS_Store
+Thumbs.db
+
+# Ignore possible large datasets, ROS bag files, or compressed archives
+*.bag
+*.db3
+*.pcd
+*.zip
+*.tar.gz
