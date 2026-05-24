@@ -2,7 +2,7 @@
 
 ## 效果图
 
-![image-20260524154037911](./assets/image-20260524154037911.png)
+![2026-05-24-20-16-20](./assets/2026-05-24-20-16-20.gif)
 
 ## 基本配置
 
@@ -135,6 +135,8 @@ ros2 launch grid_mapper_2d grid_mapper_2d.launch.py
 ```bash
 ros2 bag play 录制的BAG/实时数据
 ```
+
+![image-20260524154037911](./assets/image-20260524154037911.png)
 
 ![image-20260524154258641](./assets/image-20260524154258641.png)
 

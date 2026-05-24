@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded: ~
       Splitter Ratio: 0.5
-    Tree Height: 750
+    Tree Height: 500
   - Class: rviz_common/Views
     Expanded:
       - /Current View1
@@ -76,8 +76,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 3.1107919216156006
-        Min Value: -0.14197352528572083
+        Max Value: 3.186079263687134
+        Min Value: 0.019016113132238388
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -193,35 +193,35 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 108.15042877197266
+      Distance: 80.56023406982422
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 6.86018180847168
-        Y: 23.185806274414062
-        Z: -9.136937141418457
+        X: 5.917011260986328
+        Y: 31.146236419677734
+        Z: -11.803075790405273
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.149796724319458
+      Pitch: 1.0997965335845947
       Target Frame: <Fixed Frame>
       Value: Orbit
-      Yaw: 3.113168478012085
+      Yaw: 3.138169288635254
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1664
+  Height: 1229
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd000000010000000000000316000005e4fc0200000002fb000000100044006900730070006c006100790073010000006e0000035c0000018200fffffffb0000000a0056006900650077007301000003d60000027c0000013200ffffff00000a3e000005e400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000001000000000000031600000431fc0200000002fb000000100044006900730070006c006100790073010000006e000002620000018200fffffffb0000000a0056006900650077007301000002dc000001c30000013200ffffff000006e60000043100000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 3424
-  X: 3840
-  Y: 54
+  Width: 2568
+  X: 4461
+  Y: 191
